@@ -2,12 +2,8 @@ services:
   - type: web
     name: tradingbot
     env: python
-    buildCommand: |
-      python -m pip install --upgrade pip
-      pip install -r requirements.txt
-    startCommand: |
-      pip install streamlit --upgrade
-      python -m streamlit run main.py --server.port $PORT --server.address 0.0.0.0
+    buildCommand: chmod +x start.sh && pip install -r requirements.txt
+    startCommand: ./start.sh
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
