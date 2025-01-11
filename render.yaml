@@ -1,11 +1,12 @@
 services:
   - type: web
     name: tradingbot
-    env: docker
-    dockerfilePath: ./Dockerfile
+    runtime: docker
+    region: frankfurt
+    plan: free
+    healthCheckPath: /
     envVars:
       - key: PORT
-        value: 10000
-      - key: HOST
-        value: 0.0.0.0
-    plan: free
+        value: 8501
+      - key: PYTHONUNBUFFERED
+        value: "true"
