@@ -1,12 +1,14 @@
 services:
   - type: web
     name: tradingbot
-    runtime: docker
-    region: frankfurt
-    plan: free
-    healthCheckPath: /
+    env: python
+    buildCommand: chmod +x run.sh
+    startCommand: ./run.sh
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
       - key: PORT
         value: 8501
-      - key: PYTHONUNBUFFERED
-        value: "true"
+      - key: PYTHONPATH
+        value: /opt/render/project/src
+    autoDeploy: false
