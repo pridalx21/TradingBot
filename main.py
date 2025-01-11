@@ -1036,3 +1036,14 @@ st.info("""
 # Footer
 st.markdown("---")
 st.markdown(" 2025 Krypto Marktanalyse App")
+
+# Konfiguration für Streamlit in der Cloud
+st.set_page_config(
+    page_title="TradingBot Dashboard",
+    page_icon="📈",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# Port aus der Umgebungsvariable lesen (für Cloud-Hosting)
+port = int(os.getenv("PORT", 8501))
