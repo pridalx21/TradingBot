@@ -1,0 +1,12 @@
+ccxt==2.6.53
+pandas==2.1.1
+matplotlib==3.8.0
+numpy==1.26.0
+PyQt5==5.15.9
+PyQtChart==5.15.7
+streamlit==1.25.0
+plotly
+yfinance
+requests
+newsapi-python
+textblob
